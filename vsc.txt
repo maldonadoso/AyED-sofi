@@ -1,0 +1,40 @@
+
+compilar:
+    g++ archivo.cpp -o archivo
+
+ejecutar: 
+    ./ tecla tab
+
+
+GIT
+
+chequear el estado de cada archivo (si esta subido o no al commit)
+    git status 
+
+para agregar todo al commit
+    git add . 
+
+para crear el commit
+    git commit -m "nombre del commit"
+
+para subir todo al repositorio github
+    git push origin main
+
+
+
+ATAJOS UTILES 
+
+hacer que cada renglon entre en la pantalla
+    alt + z 
+
+para seleccionar todo
+    ctrl + a 
+
+cortar
+    ctrl + x
+
+seleccionar de a palabras
+    ctrl + shift + flechita
+
+para guardar
+    ctrl + s
