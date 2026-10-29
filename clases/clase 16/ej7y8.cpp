@@ -1,0 +1,2 @@
+/*1)      Crear 2 listas con valores ingresados por el usuario (un lote por lista) y que finaliza con 0 (ambas).
+a.      Dadas esas dos listas de enteros, crear una nueva lista con todos los elementos de las anteriores ordenados.*/

@@ -1,0 +1,1 @@
+/* Invertir el orden de los elementos ingresados por el usuario, mostrando ese orden invertido usando la estructura más apropiada para la operación.*/

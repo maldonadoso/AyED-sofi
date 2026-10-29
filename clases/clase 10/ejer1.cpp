@@ -10,6 +10,8 @@ Se pide realizar un programa que lea el archivo y genere dos vectores:
 #include <stdio.h>
 using namespace std;
 
+// IMPORTANTE: primero se definen los structs, y despues las funciones y procedimientos, CAMBIAR ORDEN!! (no se porq esta verga cuando cambio el orden me da error)
+
 // paso 1; iniciializar
 void inicializar(Alumnos vec[], int cantPos, Alumnos valorIni);
 void insertar(Alumnos vec[], int &len, Alumnos valor, int pos);
