@@ -15,10 +15,13 @@ para agregar todo al commit
     git add . 
 
 para crear el commit
-    git commit -m "nombre del commit"
+    git commit -m "nombre del commit (q va a aparecer en github)"
 
 para subir todo al repositorio github
     git push origin main
+
+para bajar todo al repositorio github (osea, tener el ultimo commit en el dispositivo que estas usando en ese momento)
+    git pull origin main
 
 
 
