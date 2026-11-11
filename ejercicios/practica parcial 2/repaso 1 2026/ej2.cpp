@@ -5,45 +5,57 @@ Se sabe que como maximo hay 100 productos registrados en cada vector*/
 #include <iostream>
 using namespace std;
 
-struct Producto{
+struct Productos{
     int codProd;
     int precio;
-    int stockD;
+    int stock;
 };
 
 struct Lista{
     int codProd;
-    int cantVend;
-    int ventaTot;
+    int cantVendida;
+    int importeVenta;
 };
 
 struct NodoLista{
     Lista info;
-    Nodolista* sgte;
+    Nodo*sgte;
 };
 
-int buscar(Producto arr[], int len,int v); //el dato es de tipo int ya que lo q busco es comparar el stock que en el struct es int
+int buscar(Productos vec[], int len, int valor);
 void liberar(Nodo*& lista);
-
 int main (){
-    Producto vec[100];
+    
+    Productos vec[100];
     int len;
-    Nodolista* lista1;
+    NodoLista* lista;
+    Nodolista*aux=lista;
 
-    NodoLista* aux= lista1; //creo un auxiliar que apunte a lista, y trabajo con este asi no pierdo a lista1
     int pos=0;
 
     while(aux != NULL){
-        pos = buscar(vec,len,aux->info.codProd); //busca en el vector Vec el producto cuyo codigo sea igual a aux->info.codProd
-                                                 // la funcion buscar recorre el vector, compara los códigos y devuelve la posición donde encontró ese producto.
+        pos= buscar(vec,len,aux->info.codProd);
+
         if(pos!=-1){
-            if(vec[pos].stockD >= aux->info.cantVend){
-                vec[pos].stockD -= aux->info.cantVend;
+            if(vec[pos].stock > aux.info->cantVendida){
+                vec[pos].stock -= aux->info.cantVendida;
             }
         }
-        aux=aux->sgte;
+
+        aux = aux->sgte;
     }
 
-    liberar(lista1);
+    liberar(lista);
+    liberar(aux);
     return 0;
+}
+
+void liberar(Nodo*& lista){
+	Nodo* aux;
+	while(lista != NULL){
+		aux = lista;
+		lista = lista->sgte;
+		delete aux;
+	}
+	
 }
